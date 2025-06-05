@@ -1,42 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GAC Global Express Freight</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GAC Parcel Tracking</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>GAC Global Express Freight</h1>
-    <p>Reliable • Fast • Worldwide</p>
-  </header>
-
-  <section>
-    <h2>Register Parcel</h2>
-    <form id="parcelForm">
-      <input type="text" id="recipient" placeholder="Recipient Name" required><br>
-      <input type="text" id="location" placeholder="Destination Location" required><br>
-      <button type="submit">Register</button>
-    </form>
-    <div id="receipt" style="display:none;">
-      <h3>Receipt</h3>
-      <p id="receiptDetails"></p>
-      <button onclick="window.print()">Print</button>
-    </div>
-  </section>
-
-  <section>
-    <h2>Map (Mocked)</h2>
-    <div id="map">Google Map Placeholder</div>
-  </section>
-
-  <footer>
-    <p>Contact: globalexpressfrieght@gmail.com</p>
-    <p>&copy; 2025 GAC Global Express Freight</p>
-  </footer>
-
+  <h1>📦 GAC Parcel Registration</h1>
+  <form id="parcelForm">
+    <label>Client Name: <input type="text" name="name" required /></label><br><br>
+    <label>Parcel ID: <input type="text" name="parcelId" required /></label><br><br>
+    <label>Destination: <input type="text" name="destination" required /></label><br><br>
+    <label>Location (City or Area): <input type="text" name="location" required /></label><br><br>
+    <button type="submit">Register Parcel</button>
+  </form>
+  <div id="receipt" style="display:none;">
+    <h2>Receipt</h2>
+    <div id="receiptContent"></div>
+    <button onclick="window.print()">🖨️ Print</button>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
